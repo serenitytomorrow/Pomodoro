@@ -49,7 +49,7 @@ export default class App extends React.Component {
     }
 
     counter(){
-        if(this.state.timer.seconds === this.state.timer.minutes === 0){
+        if(this.state.timer.seconds ===  0 && this.state.timer.minutes === 0){
             console.log(this.state.timer.minutes+' stopcouinter')
 
             /*vibrate()*/
