@@ -82,6 +82,7 @@ export default class App extends React.Component {
         this.handleClickStop()
         if(this.state.counterminutes.minutes === 25) this.setState({counterminutes: {minutes: 5, seconds: 0}})
         else this.setState({counterminutes: {minutes: 25, seconds: 0}})
+        this.handleClickReset() 
         this.render()
     }
 
