@@ -100,19 +100,17 @@ export default class App extends React.Component {
   render() {
       const buttonLength25 = (
         <TouchableOpacity
-          style={{ backgroundColor: 'blue' }}
-          onClick={this.handleClickToggleLength}>
-          <Text style={{ fontSize: 10, color: '#fff' }}>
-            5 minutes/</Text><Text style={{ fontSize: 20, color: '#fff' }}>25minutes
+           style={styles.button} onPress={this.handleClickToggleLength}>
+          <Text style={styles.button.notstrongText}>
+            5 minutes/</Text><Text style={styles.button.strongText}>25minutes
           </Text>
         </TouchableOpacity>
       );
       const buttonLength5 = (
         <TouchableOpacity
-          style={{ backgroundColor: 'blue' }}
-          onClick={this.handleClickToggleLength}>
-          <Text style={{ fontSize: 20, color: '#fff' }}>
-            5 minutes</Text>/<Text style={{ fontSize: 10, color: '#fff' }}>25minutes
+           style={styles.button} onPress={this.handleClickToggleLength}>
+          <Text style={styles.button.strongText}>
+            5 minutes</Text><Text style={styles.button.notstrongText}>/25minutes
           </Text>
         </TouchableOpacity>
       );
@@ -123,18 +121,15 @@ export default class App extends React.Component {
           seconds={this.state.timer.seconds}
         />
         <TouchableOpacity
-          style={{ backgroundColor: 'blue' }}
-          onClick={this.handleClickStart}>
+           style={styles.button} onPress={this.handleClickStart}>
           <Text style={{ fontSize: 20, color: '#fff' }}>start</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{ backgroundColor: 'blue' }}
-          onClick={this.handleClickStop}>
+           style={styles.button} onPress={this.handleClickStop}>
           <Text style={{ fontSize: 20, color: '#fff' }}>stop</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={{ backgroundColor: 'blue' }}
-          onClick={this.handleClickReset}>
+           style={styles.button} onPress={this.handleClickReset}>
           <Text style={{ fontSize: 20, color: '#fff' }}>reset</Text>
         </TouchableOpacity>
         {this.state.counterminutes.minutes === 25
@@ -148,8 +143,21 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fed',
     alignItems: 'center',
     justifyContent: 'center',
   },
+      button: {
+      alignItems: 'center',
+      backgroundColor: '#DDDDDD',
+      padding: 10,
+      strongText:{
+          fontSize: 20,
+          color: '#fff'
+      },
+      notstrongText:{
+          fontSize: 10,
+          color: '#fff'
+      },
+    },
 });
